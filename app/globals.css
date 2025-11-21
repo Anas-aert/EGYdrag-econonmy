@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  /* الخلفية الرئيسية لون F2F2F2 */
+  --background: #F2F2F2;
+  /* لون النص الأمامي الأساسي - الأزرق الداكن */
+  --foreground: #131E2B;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  /* استخدام خط Cairo كما هو محدد في ملف next.js */
+  --font-sans: var(--font-cairo);
+  --font-mono: var(--font-cairo);
+  /* إضافة اللون الأصفر كلون أساسي */
+  --color-primary: #FFC107;
+}
+
+/* يمكنك إزالة وضع Dark Mode إذا لم يكن مطلوباً، لكن تم الاحتفاظ بالبنية */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* يمكن عكس الألوان لوضع الداكن */
+    --background: #131E2B; 
+    --foreground: #F2F2F2;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  /* استخدام Cairo كخط أساسي حسب ملف next.js */
+  font-family: var(--font-cairo), Arial, Helvetica, sans-serif;
+  
+}
+
+* {
+  /* يجب أن يكون الاتجاه من اليمين لليسار */
+  direction: rtl;
+  box-sizing: border-box;
+  /* إزالة التلوين الشامل للنص والخلفية في * للحفاظ على تنسيق Tailwind */
+}
+
+/* نمط الشريط العلوي (Navbar) */
+.nav {
+  /* لون النص */
+  color: #131E2B;
+  /* لون خلفية الشريط العلوي - أبيض */
+  background-color: #ffffff;
+  /* إضافة خط سفلي بلون EgyDragon الأصفر */
+  border-bottom: 3px solid #FFC107;
+  padding: 0.5rem 0; /* لتوفير مساحة */
+}
+
+/* الألوان الخاصة بالبطاقات وعناصر التصميم التي تظهر في الصورة */
+.card {
+    /* لون الخلفية للبطاقات في الواجهة - أبيض */
+    background-color: #ffffff;
+    /* لون الحدود للبطاقات */
+    border: 1px solid #755575;
+    /* زوايا دائرية خفيفة */
+    border-radius: 0.5rem; 
+    /* ظل خفيف */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+}
+
+/* لضمان تطبيق الألوان بشكل صحيح على النصوص في البطاقات والأقسام */
+.text-primary-dark {
+    color: #131E2B;
+}
+
+.text-primary-yellow {
+    color: #FFC107;
+}
