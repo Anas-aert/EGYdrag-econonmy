@@ -8,13 +8,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "أسعار الذهب اليوم في مصر | EgyDragon",
     description: "آخر أسعار وتحليل الذهب في مصر مع تحديثات مباشرة.",
-    url: "https://egydragon.com/gold",
+    url: "https://egydragoneco.vercel.app/gold",
     siteName: "EgyDragon",
     locale: "ar_EG",
     type: "website",
   },
 };
 
-export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function Layout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return <>{children}</>;
 }

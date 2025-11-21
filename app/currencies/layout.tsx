@@ -8,13 +8,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "محول العملات وأسعار الصرف العالمية | EgyDragon",
     description: "حول بين العملات وتعرف على الأسعار المحدثة لحظة بلحظة.",
-    url: "https://egydragon.com/converter",
+    url: "https://egydragoneco.vercel.app/converter",
     siteName: "EgyDragon",
     locale: "ar_EG",
     type: "website",
   },
 };
 
-export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function Layout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return <>{children}</>;
 }
