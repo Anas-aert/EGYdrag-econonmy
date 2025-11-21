@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cairo } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/next"
 
 const cairo = Cairo({
   subsets: ["latin", "arabic"],
@@ -74,6 +75,7 @@ export default function RootLayout({
       <body className={`text-[#131E2B] ${cairo.className}`}>
         <Navigator />
         {children}
+        <Analytics />
       </body>
     </html>
   );
