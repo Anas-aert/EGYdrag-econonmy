@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://egydragoneco.vercel.app/
+
+# Sitemaps
+Sitemap: https://egydragoneco.vercel.app/sitemap.xml
